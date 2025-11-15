@@ -1,0 +1,241 @@
+% Professional CV - Optimized 2-Page Design
+\documentclass[10pt, letterpaper]{article}
+
+% Packages
+\usepackage[
+    ignoreheadfoot,
+    top=1.2cm,
+    bottom=1.2cm,
+    left=1.5cm,
+    right=1.5cm,
+    footskip=0.5cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 79, 144}
+\definecolor{accentColor}{RGB}{100, 100, 100}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage[
+    pdftitle={Jihen Messaoud - Software Engineer CV},
+    pdfauthor={Jihen Messaoud},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{iftex}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{lmodern}
+\fi
+
+% Settings
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\columnsep}{0.4cm}
+
+% Section formatting
+\titleformat{\section}{\color{primaryColor}\large\bfseries}{}{0pt}{}[\color{primaryColor}\titlerule]
+\titlespacing{\section}{0pt}{0.25cm}{0.15cm}
+
+% Custom commands
+\newcommand{\experienceentry}[5]{
+    \textbf{#1} \hfill \textcolor{accentColor}{\textit{#3}} \\
+    \textcolor{accentColor}{\small #2} \hspace{0.1cm} \textcolor{accentColor}{\small #4}
+    \vspace{-0.05cm}
+    \begin{itemize}[leftmargin=*, itemsep=0.02cm, topsep=0.03cm, parsep=0pt]
+        #5
+    \end{itemize}
+    \vspace{0.1cm}
+}
+
+\newcommand{\projectentry}[3]{
+    \textbf{#1} \hfill \textcolor{accentColor}{\small #2}
+    \vspace{-0.05cm}
+    \begin{itemize}[leftmargin=*, itemsep=0.02cm, topsep=0.03cm, parsep=0pt]
+        #3
+    \end{itemize}
+    \vspace{0.08cm}
+}
+
+\newcommand{\educationentry}[4]{
+    \textbf{#1} \hfill \textcolor{accentColor}{\textit{#3}} \\
+    \textcolor{accentColor}{\small #2}
+    \vspace{0.02cm}
+    
+    {\small #4}
+    \vspace{0.08cm}
+}
+
+\begin{document}
+
+% ===== HEADER =====
+\begin{center}
+    {\LARGE\bfseries\color{primaryColor} JIHEN MESSAOUD}
+    
+    \vspace{0.15cm}
+    
+    {\small AI-Driven Solutions \& Cloud Innovation | Software Engineering Master's Graduate}
+    
+    \vspace{0.1cm}
+    
+    {\small \faLinkedin\ linkedin.com/in/jihenme \quad | \quad \faGithub\ github.com/jihen22 \quad | \quad \faMapMarker\ Gafsa, Tunisia}
+\end{center}
+
+\vspace{0.1cm}
+
+% ===== PROFESSIONAL SUMMARY =====
+\section{Professional Summary}
+\small
+Results-driven Full-Stack Developer with expertise in AI-powered solutions and cloud architecture. Proven track record in designing scalable microservices, implementing CI/CD pipelines, and delivering enterprise-grade applications. Strong foundation in Agile methodologies, DevOps practices, and modern web technologies. Passionate about innovation, excellence, and collaborative problem-solving.
+
+% ===== EXPERIENCE =====
+\section{Professional Experience}
+
+\experienceentry{Full-Stack AI Developer Intern}{AiLine}{Jan – Aug 2025}{Tunis (Remote)}{
+    \item Developed \textbf{AiLine Pro}, an AI platform aligning organizational values using NLP analysis and ML recommendations
+    \item Architected microservices solution with Domain-Driven Design and cloud-native Azure infrastructure
+    \item Built interactive dashboards enabling C-level executives to monitor real-time engagement metrics
+    \item Implemented Elasticsearch monitoring system and established CI/CD pipelines with Azure DevOps
+    \item Led Agile/Scrum development across 2 releases and 5 sprints
+    \item \textbf{Stack:} Angular, Spring Boot, PostgreSQL, Azure, NLP, ML, Elasticsearch, Docker, CI/CD
+}
+
+\experienceentry{Web Developer Intern}{Enterprise eSolutions}{Feb – Jul 2023}{Monastir (On-site)}{
+    \item Built intelligent Laravel CRUD generator with admin dashboard, reducing database setup time by 60\%
+    \item Automated code generation for 8-developer team, eliminating repetitive tasks
+    \item Delivered comprehensive technical documentation for seamless knowledge transfer
+    \item \textbf{Stack:} Laravel, PHP, MySQL, Bootstrap, AJAX, Git
+}
+
+\experienceentry{Full Stack Developer Intern}{Compagnie des Phosphates de Gafsa (CPG)}{Jun – Sep 2022}{Gafsa (On-site)}{
+    \item Engineered enterprise employee management system with improved transaction tracking
+    \item Streamlined purchasing workflows, saving 15+ staff hours monthly
+    \item Developed RESTful APIs and responsive UI with Angular and Spring Boot
+    \item \textbf{Stack:} Angular, Spring Boot, MySQL, RESTful APIs, Karma, TypeScript
+}
+
+\experienceentry{General Secretary}{Microsoft Tech Club - ISIM Monastir}{Oct 2021 – May 2022}{Monastir}{
+    \item Coordinated multiple technical events, boosting student engagement by 40\%
+    \item Streamlined administrative operations and meeting documentation processes
+}
+
+% ===== EDUCATION =====
+\section{Education}
+
+\educationentry{Professional Master's Degree in Software Engineering}{Higher Institute of Informatics and Mathematics of Monastir (ISIMM)}{Sep 2023 – Oct 2025}{
+    \textbullet\ \textbf{Thesis:} "Development of AI-Powered Solution for Organizational Culture Alignment" (Defended Oct 2025)
+}
+
+\educationentry{Bachelor's Degree in Software Engineering}{Higher Institute of Informatics and Mathematics of Monastir (ISIMM)}{Sep 2020 – Jul 2023}{
+    \textbullet\ Strong foundation in algorithms, data structures, software architecture, and database management
+}
+
+\educationentry{Erasmus+ Summer School in Information Technology}{Universidad de Alcalá (UAH), Spain}{Jul 2022}{
+    \textbullet\ Focused on cybersecurity, big data, and data integration (PySpark, Docker, Quarkus, Tableau)
+}
+
+% ===== KEY PROJECTS =====
+\section{Key Projects}
+\vspace{-0.1cm}
+
+\projectentry{AiLine Pro -- AI-Powered Culture Platform}{github.com/jihen22/AilinePlateform}{
+    \item Microservices platform using NLP and ML for organizational value alignment with real-time dashboards
+    \item \textbf{Tech:} Angular, TypeScript, Spring Boot, PostgreSQL, Azure, NLP, ML, Docker, Elasticsearch
+}
+
+\projectentry{Automated Monetary Management DevOps Pipeline}{github.com/jihen22/Automated-MonetaryManagement-DevOps-Pipeline}{
+    \item Full CI/CD pipeline with automated testing at every development stage for enterprise application
+    \item \textbf{Tech:} Java, DevOps, CI/CD, Jenkins, Automated Testing
+}
+
+\projectentry{Advanced CRUD Generator with Laravel}{github.com/jihen22/CRUDGenerator}{
+    \item Intelligent code generator creating CRUD operations and admin interfaces from database schema
+    \item \textbf{Tech:} Laravel, PHP, MySQL, Bootstrap, JavaScript, SCSS, Blade, Git
+}
+
+\projectentry{Employee Manager Application (Full Stack)}{github.com/jihen22/employeemanagerFront | employeemanager-Backend-}{
+    \item Full-stack system with Angularfrontend, Spring Boot backend, and comprehensive testing suite
+    \item \textbf{Tech:} Angular, TypeScript, Spring Boot, MySQL, Karma, RESTful APIs
+}
+
+% ===== TECHNICAL SKILLS =====
+\section{Technical Skills}
+
+\begin{multicols}{2}
+\small
+\textbf{Languages} \\
+PHP, Java, JavaScript (ES6+), TypeScript, Python, C++, SQL, HTML5/CSS3
+
+\vspace{0.15cm}
+
+\textbf{Frontend Development} \\
+Angular, React, Bootstrap, jQuery, Responsive Design
+
+\vspace{0.15cm}
+
+\textbf{Backend Development} \\
+Laravel, Spring Boot, Node.js, Express, RESTful APIs, Microservices, MVC
+
+\vspace{0.15cm}
+
+\textbf{Databases} \\
+MySQL, MongoDB, PostgreSQL, Elasticsearch, Data Modeling
+
+\columnbreak
+
+\textbf{DevOps \& Cloud} \\
+Docker, Kubernetes, Git, GitHub/GitLab, CI/CD, Jenkins, Azure, Azure DevOps
+
+\vspace{0.15cm}
+
+\textbf{AI \& Data Science} \\
+NLP, Machine Learning, TensorFlow, PySpark, Tableau
+
+\vspace{0.15cm}
+
+\textbf{Monitoring} \\
+Elasticsearch, Prometheus, Grafana
+
+\vspace{0.15cm}
+
+\textbf{Methodologies} \\
+Agile/Scrum, DDD, Event Storming, OOP, TDD, Design Patterns
+\end{multicols}
+
+% ===== CERTIFICATIONS =====
+\section{Certifications}
+
+\begin{small}
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+    \textbf{Certified AI Solutions Developer} & \textit{OpenAI Academy | Jan 2025} \\
+    \textbf{Professional Cloud Architect} & \textit{CloudSkills Institute | Mar 2025} \\
+    \textbf{AWS Academy Graduate - Cloud Foundations} & \textit{Amazon Web Services | Nov 2024} \\
+    \textbf{AWS Cloud Practitioner (CLF-C02)} & \textit{KodeKloud | Sep 2024} \\
+    \textbf{Scrum Fundamentals Certified (SFC)} & \textit{SCRUMstudy | Sep 2024} \\
+    \textbf{Docker \& Kubernetes Engineer} & \textit{KodeKloud | Sep 2024} \\
+    \textbf{Career Essentials in Generative AI} & \textit{Microsoft \& LinkedIn | Sep 2024} \\
+    \textbf{Azure AI Fundamentals (AI-900)} & \textit{Microsoft | Aug 2024} \\
+    \textbf{Full-Stack Web Development Certificate} & \textit{Coursera / University of Michigan | Jul 2024} \\
+\end{tabularx}
+\end{small}
+
+% ===== LANGUAGES =====
+\section{Languages}
+
+\begin{small}
+\textbf{Arabic:} Native \quad | \quad \textbf{English:} Bilingual \quad | \quad \textbf{French:} Bilingual \quad | \quad \textbf{German:} Elementary \quad | \quad \textbf{Spanish:} Limited Working
+\end{small}
+
+\vspace{0.3cm}
+
+\end{document}
