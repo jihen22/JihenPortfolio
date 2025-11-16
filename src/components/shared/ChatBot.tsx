@@ -176,7 +176,7 @@ export function ChatBot() {
           <div className="flex items-center justify-between p-4 border-b border-border bg-gradient-to-r from-primary/10 to-primary/5 rounded-t-2xl">
             <div>
               <h3 className="font-semibold text-foreground">Jihen</h3>
-              <p className="text-xs text-muted-foreground">Let's chat! 💬</p>
+           <p className="text-xs text-muted-foreground">{"Let's chat! 💬"}</p>
             </div>
             <button
               onClick={() => {
